@@ -1,4 +1,4 @@
-package s4j.java.chapter05;
+package s4j.java.chapter06;
 
 public class VarArgs {
 

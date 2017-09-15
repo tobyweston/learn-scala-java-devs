@@ -1,4 +1,4 @@
-package s4j.scala.chapter05
+package s4j.scala.chapter06
 
 object DefaultArgs {
 
