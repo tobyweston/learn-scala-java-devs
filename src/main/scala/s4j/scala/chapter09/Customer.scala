@@ -1,4 +1,4 @@
-package s4j.scala.chapter09
+package s4j.scala.chapter09.example01
 
 class Customer(val name: String, val address: String)
 
@@ -6,11 +6,11 @@ object Customer {
   val eric = new Customer("Eric", "29 Acacia Road")
 }
 
-/* decompile output
+/* decompiler output
 
-java -jar cfr_0_122.jar target/scala-2.12/classes/s4j/scala/chapter09/Customer.class
+java -jar cfr_0_122.jar target/scala-2.12/classes/s4j/scala/chapter09/example01/Customer.class
 
-package s4j.scala.chapter09;
+package s4j.scala.chapter09.example01;
 
 public class Customer {
   private final String name;
