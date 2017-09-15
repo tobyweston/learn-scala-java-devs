@@ -9,6 +9,8 @@ public class Collections {
         List<String> list = new ArrayList<>();
 
         list.forEach(value -> System.out.println(value));
+
+        list.forEach(System.out::println);
     }
 
 }
