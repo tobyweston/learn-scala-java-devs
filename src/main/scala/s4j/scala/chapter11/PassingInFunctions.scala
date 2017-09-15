@@ -6,9 +6,6 @@ object PassingInFunctions {
 	list.sorted((a: String, b: String) => a.compareTo(b))     // ascending
 	list.sorted((a: String, b: String) => b.compareTo(a))     // descending
 
-  // alternative syntax, implicit arguments
-	list.sorted(_.compareTo(_))                               // ascending
-
   // note that in Scala 2.11 you couldn't do this
   list.sorted((x: String, y: String) => x.compareTo(y))
 
