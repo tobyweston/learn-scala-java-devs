@@ -8,3 +8,5 @@ libraryDependencies ++= Seq(
   "org.scala-lang" % "scala-compiler" % "2.12.3",
   "org.scala-lang" % "scala-reflect" % "2.12.3"
 )
+
+logLevel := Level.Error
