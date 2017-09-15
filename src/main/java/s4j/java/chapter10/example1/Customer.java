@@ -1,4 +1,4 @@
-package s4j.java.chapter10;
+package s4j.java.chapter10.example1;
 
 public class Customer {
 	private final String fullname;
