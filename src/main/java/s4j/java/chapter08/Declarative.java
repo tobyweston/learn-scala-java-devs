@@ -1,4 +1,4 @@
-package s4j.java.chatper08;
+package s4j.java.chapter08;
 
 import java.util.stream.IntStream;
 
