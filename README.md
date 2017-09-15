@@ -16,6 +16,6 @@ See the file [Contributing.md](Contributing.md) for more information on how you 
 
 This is a Scala SBT project. Build it from scartch using:
 
-   sbt clean compile
+    sbt clean compile
    
 or import the `build.sbt` into your favorite IDE.
