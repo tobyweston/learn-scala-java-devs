@@ -1,7 +1,9 @@
 package s4j.scala.chapter12
 
 class CustomersSortableBySpend extends Customers {
-  implicit def OrderingToFunction[A](f: (A, A) => Int): Ordering[A] = {
+
+  // no longer needed since Scala 2.12
+  implicit def functionToOrdering[A](f: (A, A) => Int): Ordering[A] = {
     new Ordering[A] {
       def compare(a: A, b: A) = f.apply(a, b)
     }
