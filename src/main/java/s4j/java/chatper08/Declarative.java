@@ -14,6 +14,6 @@ public class Declarative {
 		// (0 to 100).foreach(println(_))
 
 		// declarative java
-		IntStream.range(0, 100).forEach(System.out::println)
+		IntStream.range(0, 100).forEach(System.out::println);
 	}
 }
