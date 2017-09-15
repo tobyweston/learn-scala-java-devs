@@ -2,6 +2,7 @@ package s4j.java.chapter11;
 
 import static s4j.java.chapter11.WaitFor.waitFor;
 
+@SuppressWarnings("all")
 class Examples {
 
 	void anonymousClass() throws InterruptedException {

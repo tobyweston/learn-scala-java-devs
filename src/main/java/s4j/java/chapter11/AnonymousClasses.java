@@ -3,8 +3,8 @@ package s4j.java.chapter11;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.BiFunction;
 
+@SuppressWarnings("all")
 public class AnonymousClasses {
 
 	static {

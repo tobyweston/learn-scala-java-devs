@@ -3,6 +3,7 @@ package s4j.java.chapter11;
 import java.util.Arrays;
 import java.util.List;
 
+@SuppressWarnings("all")
 public class PassingInFunctions {
 
 	static {

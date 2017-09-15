@@ -2,6 +2,7 @@ package s4j.java.chapter11;
 
 import java.util.function.BiFunction;
 
+@SuppressWarnings("all")
 public class StoringFunctions {
 
 	static {
