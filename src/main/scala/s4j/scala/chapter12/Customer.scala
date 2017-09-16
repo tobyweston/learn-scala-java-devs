@@ -39,14 +39,19 @@ object TestDiscount extends App {
   System.out.println("Joe's basket will cost $ " + joe.total)
 }
 
-object Example extends App {
-  val customer = new Customer("", "")
-  customer.add(PricedItem(2.3))
-  customer.add(PricedItem(3.3))
-  println("customer.total = " + customer.total)
 
-  val discounted = new DiscountedCustomer("George", "1 Apple Street")
-  discounted.add(PricedItem(2.3))
-  discounted.add(PricedItem(3.3))
-  println("discounted.total = " + discounted.total)
+package customer {
+
+  object Example extends App {
+    val customer = new Customer("", "")
+    customer.add(PricedItem(2.3))
+    customer.add(PricedItem(3.3))
+    println("customer.total = " + customer.total)
+
+    val discounted = new DiscountedCustomer("George", "1 Apple Street")
+    discounted.add(PricedItem(2.3))
+    discounted.add(PricedItem(3.3))
+    println("discounted.total = " + discounted.total)
+  }
+
 }
