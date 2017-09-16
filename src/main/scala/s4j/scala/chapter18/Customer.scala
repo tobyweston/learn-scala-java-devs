@@ -1,4 +1,4 @@
-package s4j.scala.chatper18
+package s4j.scala.chapter18
 
 class Customer(val name: String, val address: String) {
   var yearsACustomer: Int = 0

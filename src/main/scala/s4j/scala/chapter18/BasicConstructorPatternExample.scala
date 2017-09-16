@@ -1,8 +1,8 @@
-package s4j.scala.chatper18
+package s4j.scala.chapter18
 
 object BasicConstructorPatternExample extends App {
 
-  val hero = new SuperHero("Batman", "Bruce Wayne", List("Intellect", "Speed", "Agility", "Strength"))
+  val hero = new SuperHero("Batman", "Bruce Wayne", List("Speed", "Agility", "Strength"))
 
   hero match {
     case SuperHero(_, "Bruce Wayne", _) => println("I'm Batman!")

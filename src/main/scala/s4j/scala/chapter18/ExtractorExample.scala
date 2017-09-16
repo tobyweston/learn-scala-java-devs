@@ -1,6 +1,6 @@
-package s4j.scala.chatper18
+package s4j.scala.chapter18
 
-import s4j.scala.chatper18.Extractors.{DiscountExtractor, UrlExtractor, YearsOfCustom}
+import s4j.scala.chapter18.Extractors.{DiscountExtractor, UrlExtractor, YearsOfCustom}
 
 object ExtractorExample extends App {
   val today = ""
