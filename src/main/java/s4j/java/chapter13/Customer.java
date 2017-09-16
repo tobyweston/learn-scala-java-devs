@@ -1,4 +1,4 @@
-package s4j.java.chapter12;
+package s4j.java.chapter13;
 
 @SuppressWarnings("all")
 public class Customer implements Comparable<Customer> {
@@ -6,6 +6,16 @@ public class Customer implements Comparable<Customer> {
     private final String name;
     private final String address;
     private final ShoppingBasket basket = new ShoppingBasket();
+
+    public static Customer create(String name, String address, Integer yearsACustomer) {
+        Customer customer = null;
+        if (yearsACustomer > 2) {
+            customer = new DiscountedCustomer(name, address);
+        } else {
+            customer = new Customer(name, address);
+        }
+        return customer;
+    }
 
     public Customer(String name, String address) {
         this.name = name;

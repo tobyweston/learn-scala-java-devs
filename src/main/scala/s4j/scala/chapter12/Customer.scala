@@ -17,16 +17,7 @@ class Customer(val name: String, val address: String) extends Ordered[Customer] 
   override def toString: String = name + " $ " + total
 }
 
-object Customer {
 
-}
-
-class DiscountedCustomer(name: String, address: String) extends Customer(name, address) {
-
-  override def total: Double = {
-    super.total * 0.9
-  }
-}
 
 object TestDiscount extends App {
   val joe = new DiscountedCustomer("Joe", "128 Bullpen Street")
