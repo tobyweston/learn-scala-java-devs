@@ -7,7 +7,7 @@ trait HasFourLegs extends Animal
 class FlyingHorse extends Animal with Bird with HasFourLegs
 
 
-package linerazation {
+package linearization {
 
   import scala.reflect.runtime.universe._
 
