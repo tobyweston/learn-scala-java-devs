@@ -19,3 +19,11 @@ This is a Scala SBT project. Build it from scartch using:
     sbt clean compile
    
 or import the `build.sbt` into your favorite IDE.
+
+## Releases
+
+[Release v1.0](https://github.com/tobyweston/learn-scala-java-devs/releases) corresponds to the code in the published book, without corrections or updates.
+
+## Licence
+
+The software is licenced under the [Apache 2.0 open source license](LICENSE.txt).
