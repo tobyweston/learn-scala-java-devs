@@ -51,3 +51,9 @@ class Wildcards {
     }
   }
 }
+
+class Animal extends Comparable[Animal] {
+  def compareTo(o: Animal): Int = 0
+}
+class Lion extends Animal
+class Zebra extends Animal

@@ -20,9 +20,6 @@ package s4j.java.chapter14;
 import java.util.ArrayList;
 import java.util.List;
 
-import static s4j.java.chapter14.Zoo.Animal;
-import static s4j.java.chapter14.Zoo.Lion;
-
 @SuppressWarnings("all")
 public class Wildcards {
 
@@ -76,4 +73,14 @@ public class Wildcards {
             numbers.add(i);
         }
     }
+
+    static class Animal implements Comparable<Animal> {
+        @Override
+        public int compareTo(Animal o) {
+            return 0;
+        }
+    }
+    static class Lion extends Animal { }
+    static class Zebra extends Animal { }
 }
+
