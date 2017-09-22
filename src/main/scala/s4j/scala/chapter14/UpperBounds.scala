@@ -16,16 +16,20 @@
 
 package s4j.scala.chapter14
 
-trait Sortable[A <: Ordered[A]] extends Iterable[A] {
-  def sort: Seq[A] = {
-    this.toList.sorted
+object UpperBounds {
+
+  trait Sortable[A <: Ordered[A]] extends Iterable[A] {
+    def sort: Seq[A] = {
+      this.toList.sorted
+    }
   }
-}
 
-class Customers extends Sortable[Customer] {
-  override def iterator = ???
-}
+  class Customers extends Sortable[Customer] {
+    override def iterator = ???
+  }
 
-class Customer extends Ordered[Customer] {
-  override def compare(that: Customer) = 0
+  class Customer extends Ordered[Customer] {
+    override def compare(that: Customer) = 0
+  }
+
 }
