@@ -26,7 +26,7 @@ public class Zoo {
     public static <A extends Comparable<? super A>> void sort(List<A> list) {
     }
 
-    // public static <A extends Comparable<?>, U> void scalaLikeSort(List<A> list) {
+    // public static <A extends Comparable<?>, U> void scalaLikeSort(List<A> list)
     public static <A extends Comparable<?>> void scalaLikeSort(List<A> list) {
         // eg. Collections.sort(list);
     }

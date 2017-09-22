@@ -16,44 +16,33 @@
 
 package s4j.scala.chapter14
 
-// see http://stackoverflow.com/questions/16430355/translating-generic-wildcards-from-java-to-scala
+object LowerBounds3 {
 
-object Zoo {
+  // although a literal translation of the java, this would cause an
+  // "illegal cyclic reference involving type A" error:
 
-  def sortOrdered[A <: Ordered[U], U >: A](list: List[A]) = {
-//    Collections.sort(list)
-  }
+  // def sort[A <: Comparable[_ >: A]](a: List[A]) = { ??? }
 
-  def badSort[A <: Comparable[A]](list: List[A]) = { }
+  // instead, we use this (and provide a type hint in the sort method below)
+  def sort[A <: Comparable[U], U >: A](list: List[A]) = { }
 
-  def sort[A <: Comparable[U], U >: A](list: List[A]) {
-//    Collections.sort(list)
-  }
+  def main(args: String*) {
 
-  // is the working `sort` the same as `sort3`?
-
-  def sort3[A <: Comparable[_]](list: List[A]) {
-//    Collections.sort(list)
-  }
-
-  // doesn't compile: illegal cyclic references involving type T
-  // def compilerFailure[T <: Comparable[_ >: T]](a: Array[T]) { }
-
-  def main(args: Array[String]) {
     var enclosure = List[Lion]()
     enclosure = new Lion +: enclosure
     enclosure = new Lion +: enclosure
-    sort[Lion, Animal](enclosure)
-    var lion: Lion = enclosure(1)
+    sort[Lion, Animal](enclosure)           // no longer a compiler failure
 
     var zoo = List[Animal]()
     zoo = new Zebra +: zoo
     zoo = new Lion +: zoo
     zoo = new Lion +: zoo
     sort(zoo)
-    var animal: Animal = zoo(1)
   }
 
+  class Animal extends Comparable[Animal] {
+    def compareTo(o: Animal): Int = 0
+  }
+  class Lion extends Animal
+  class Zebra extends Animal
 }
-
-
