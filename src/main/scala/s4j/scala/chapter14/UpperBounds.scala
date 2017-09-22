@@ -26,4 +26,6 @@ class Customers extends Sortable[Customer] {
   override def iterator = ???
 }
 
-class Customer
+class Customer extends Ordered[Customer] {
+  override def compare(that: Customer) = 0
+}
