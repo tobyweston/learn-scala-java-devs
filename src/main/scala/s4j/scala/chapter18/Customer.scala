@@ -21,5 +21,7 @@ class Customer(val name: String, val address: String) {
 }
 
 object Customer {
-  def unapply(customer: Customer): Option[(String, String)] = Some((customer.name, customer.address))
+  def unapply(customer: Customer): Option[(String, String)] = {
+    Some((customer.name, customer.address))
+  }
 }
