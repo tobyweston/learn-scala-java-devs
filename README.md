@@ -1,5 +1,7 @@
 # Apress Source Code
 
+![](https://travis-ci.org/tobyweston/learn-scala-java-devs.svg?branch=master)
+
 This repository accompanies [_Learn Scala: A Practical Primer for Java Developers_](http://www.apress.com/gp/book/9781484231074) by Toby Weston (Apress, 2017).
 
 ![](https://images.springer.com/sgw/books/medium/9781484231074.jpg)
