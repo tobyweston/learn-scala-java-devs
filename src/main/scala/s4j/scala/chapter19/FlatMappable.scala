@@ -20,6 +20,17 @@ class FlatMappable[A](elements: A*) {
 
   def flatMap[B](f: A => List[B]): List[B] = {
     val result = collection.mutable.MutableList[B]()
+    elements.foreach(element => {
+      f(element).foreach(subElement => {
+        result += subElement
+      })
+    })
+    result.toList
+  }
+
+  // abbreviated / alternative syntax (as shown in the book)
+  def flatMapAbbr[B](f: A => List[B]): List[B] = {
+    val result = collection.mutable.MutableList[B]()
     elements.foreach {
       f.apply(_).foreach {
         result += _
@@ -43,8 +54,8 @@ package flatmap {
     }
 
     val mappable = new FlatMappable(1, 2, 10)
-    val result = mappable.flatMap(oddNumbersTo)
-    println(result)
+    println(mappable.flatMap(oddNumbersTo))
+    println(mappable.flatMapAbbr(oddNumbersTo))
   }
 
 }
