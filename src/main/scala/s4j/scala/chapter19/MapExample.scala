@@ -18,7 +18,7 @@ package s4j.scala.chapter19
 
 import java.util.Calendar
 
-object MapExample {
+object MapExample extends App {
 
   def age(birthYear: Int) = {
     val currentYear = Calendar.getInstance.get(Calendar.YEAR)
@@ -27,7 +27,9 @@ object MapExample {
 
   val birthdays = List(1990, 1977, 1984, 1961, 1973)
 
-  birthdays.map(age)  // = List(25, 38, 31, 54, 42)
+  val result = birthdays.map(age)
+  println(result)
+  // results in List(27, 40, 33, 56, 44) when run in 2017
 
   // written in-line
   birthdays.map(year => Calendar.getInstance.get(Calendar.YEAR) - year)

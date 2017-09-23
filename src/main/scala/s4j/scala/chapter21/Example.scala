@@ -19,7 +19,7 @@ package s4j.scala.chapter21
 import s4j.scala.chapter21.CustomerDatabase.database
 
 object CustomerDatabase {
-  val database = Customers()
+  val database = new CustomerSet()
 
   val customerA = Customer("Albert", Some(Address("1a Bridge St", None)))
   val customerB = Customer("Beatriz", None)

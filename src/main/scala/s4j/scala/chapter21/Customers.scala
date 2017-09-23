@@ -21,7 +21,3 @@ trait Customers extends Iterable[Customer] {
   def find(name: String): Option[Customer]
   def findOrNull(name: String): Customer
 }
-
-object Customers {
-  def apply() = new CustomerSet()
-}
