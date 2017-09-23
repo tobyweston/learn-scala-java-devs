@@ -16,7 +16,7 @@ See the file [Contributing.md](Contributing.md) for more information on how you 
 
 ## Building
 
-This is a Scala SBT project. Build it from scartch using:
+This is a Scala SBT project. Build it from scratch using:
 
     sbt clean compile
    
