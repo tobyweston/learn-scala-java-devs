@@ -22,7 +22,7 @@ or import the `build.sbt` into your favorite IDE.
 
 ## Releases
 
-[Release v1.0](https://github.com/tobyweston/learn-scala-java-devs/releases) corresponds to the code in the published book, without corrections or updates.
+[Release v1.1](https://github.com/tobyweston/learn-scala-java-devs/releases) corresponds to the code in the published book, without corrections or updates.
 
 ## Licence
 
