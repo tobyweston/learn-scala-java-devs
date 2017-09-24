@@ -51,7 +51,7 @@ class CustomersSortableBySpend extends Customers {
 
   // but this scala example, can not
   scalaExample(new s4j.scala.chapter12.Item {
-    override def price(): lang.Double = 23.4D
+    override def price(): Double = 23.4D
   })
   // scalaExample(() => 23.4D)    // compiler failure
 
