@@ -14,22 +14,26 @@
  * limitations under the License.
  */
 
-package s4j.java.chapter12;
+package s4j.scala.chapter12
 
-@SuppressWarnings("all")
-public class DiscountedCustomer extends Customer {
+object AnonymousClass extends App {
 
-    public DiscountedCustomer(String name, String address) {
-        super(name, address);
-    }
+  val joe = new DiscountedCustomer("Joe", "128 Bullpen Street")
 
-    @Override
-    public Double total() {
-        return super.total() * 0.90;
-    }
-
-    public Double getDiscountAmount() {
-        return 10.0;
-    }
+  // example of anonymous class
+  joe.add(new Item {
+    def price = 2.5
+  })
+  joe.add(new Item {
+    def price = 3.5
+  })
+  println("Joe's basket will cost $ " + joe.total)
 
 }
+
+
+
+
+
+
+

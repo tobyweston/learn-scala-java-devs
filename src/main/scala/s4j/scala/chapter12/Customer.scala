@@ -33,20 +33,6 @@ class Customer(val name: String, val address: String) extends Ordered[Customer] 
   override def toString: String = name + " $ " + total
 }
 
-
-
-object TestDiscount extends App {
-  val joe = new DiscountedCustomer("Joe", "128 Bullpen Street")
-  joe.add(new Item {
-    def price = 2.5
-  })
-  joe.add(new Item {
-    def price = 3.5
-  })
-  System.out.println("Joe's basket will cost $ " + joe.total)
-}
-
-
 package customer {
 
   object Example extends App {
