@@ -50,28 +50,4 @@ public interface Sortable<A extends Comparable<A>> extends Iterable<A> {
         }
     }
 
-	public class CustomersUsageExample {
-        public static void main(String... args) {
-            Customers customers = new CustomersSortableBySpend();
-
-            Customer daphne = new Customer("Daphne Blake", "101 Easy St");
-            Customer fred = new Customer("Fred Jones", "8 Tuna Lane,");
-            DiscountedCustomer norville = new DiscountedCustomer("Norville Rogers", "12 Maple Street");
-            Customer velma = new Customer("Velma Dinkley", "316 Circle Drive");
-
-            daphne.add(new PricedItem(2.4));
-            daphne.add(new PricedItem(1.4));
-            fred.add(new PricedItem(2.75));
-            fred.add(new PricedItem(2.75));
-            norville.add(new PricedItem(6.99));
-            norville.add(new PricedItem(1.50));
-
-            customers.add(daphne);
-            customers.add(fred);
-            customers.add(norville);
-            customers.add(velma);
-
-            System.out.println(customers.sort());
-        }
-    }
 }
