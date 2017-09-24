@@ -16,6 +16,7 @@
 
 package s4j.scala.chapter12
 
+@FunctionalInterface
 trait Item {
   def price: Double
 }
