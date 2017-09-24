@@ -32,7 +32,7 @@ class FlatMappable[A](elements: A*) {
   def flatMapAbbr[B](f: A => List[B]): List[B] = {
     val result = collection.mutable.MutableList[B]()
     elements.foreach {
-      f.apply(_).foreach {
+      f(_).foreach {
         result += _
       }
     }
