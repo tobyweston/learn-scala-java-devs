@@ -1,4 +1,4 @@
-# Errata for _Scala for Java Developers: A PracticalPrimer for Java Developers_
+# Errata for _Scala for Java Developers: A Practical Primer_
 
 On **page xx** [Summary of error]:
  
