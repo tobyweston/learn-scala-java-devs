@@ -17,11 +17,9 @@
 
 package s4j.scala.chapter14
 
-import scala.collection.mutable
-
 class Wildcards {
 
-  printUnknown(mutable.MutableList[String]())
+  printUnknown(List[String]())
 
   // this shouldn't be allowed? I cant add to elements in `printUnknown`???
   //  var list = mutable.MutableList[_]()
@@ -32,10 +30,10 @@ class Wildcards {
 
   //  printUnknown(list)
 
-  def printUnknown(list: mutable.MutableList[_]) {
+  def printUnknown(list: List[_]) {
     for (e <- list) {
       val f: Any = e
-      println(e)
+      println(f)
     }
   }
 

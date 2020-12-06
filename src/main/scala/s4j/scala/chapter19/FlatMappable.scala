@@ -16,10 +16,12 @@
 
 package s4j.scala.chapter19
 
+import scala.collection.mutable
+
 class FlatMappable[A](elements: A*) {
 
   def flatMap[B](f: A => List[B]): List[B] = {
-    val result = collection.mutable.MutableList[B]()
+    val result = mutable.ListBuffer[B]()
     elements.foreach(element => {
       f(element).foreach(subElement => {
         result += subElement
@@ -30,7 +32,7 @@ class FlatMappable[A](elements: A*) {
 
   // abbreviated / alternative syntax (as shown in the book)
   def flatMapAbbr[B](f: A => List[B]): List[B] = {
-    val result = collection.mutable.MutableList[B]()
+    val result = mutable.ListBuffer[B]()
     elements.foreach {
       f(_).foreach {
         result += _
@@ -46,7 +48,7 @@ package flatmap {
   object Example extends App {
 
     def oddNumbersTo(end: Int): List[Int] = {
-      val odds = collection.mutable.MutableList[Int]()
+      val odds = mutable.ListBuffer[Int]()
       for (i <- 0 to end) {
         if (i % 2 != 0) odds += i
       }

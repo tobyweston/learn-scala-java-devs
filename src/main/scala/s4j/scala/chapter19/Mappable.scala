@@ -16,10 +16,12 @@
 
 package s4j.scala.chapter19
 
+import scala.collection.mutable
+
 class Mappable[A](elements: List[A]) {
 
   def map[B](f: A => B): List[B] = {
-    val result = collection.mutable.MutableList[B]()
+    val result = mutable.ListBuffer[B]()
     elements.foreach {
       result += f(_)
     }
